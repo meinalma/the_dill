@@ -30,17 +30,24 @@ body {
 HEADER
 ----------*/
 .header-container {
+  display: -webkit-box;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+          align-items: flex-end;
   height: 100vh;
 }
 
 /* LEFT SIDE */
 .text-box {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
   width: 35%;
   font-size: 115%;
   position: relative;
@@ -48,16 +55,20 @@ HEADER
 .text-box__name {
   position: relative;
   left: 15%;
+  display: -webkit-box;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   top: 3%;
 }
 .text-box__main {
+  display: -webkit-box;
   display: flex;
   margin-top: auto;
   margin-bottom: auto;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -74,6 +85,7 @@ HEADER
 .left {
   width: 50%;
   height: 100vh;
+  display: -webkit-box;
   display: flex;
 }
 
@@ -98,6 +110,7 @@ ul {
   text-decoration: none;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
   transition: border-bottom 0.2s;
   padding: 8px 0;
   color: var(--main-font-color);
@@ -141,11 +154,14 @@ ul.nav li {
 RIGHT SIDE
 ----------*/
 .right {
+  display: -webkit-box;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
   width: 50%;
   height: 100vh;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   background-image: url('images/plant11.jpeg');
   background-position: center;
   background-size: cover;
@@ -180,7 +196,9 @@ RIGHT SIDE
   font-weight: bold;
   font-size: 120%;
   border-radius: 0 3px 3px 0;
-  user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -190,8 +208,10 @@ RIGHT SIDE
   border-radius: 3px 0 0 3px;
 }
 .row {
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
@@ -216,8 +236,10 @@ RIGHT SIDE
 .column {
   float: left;
   width: 16%;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 /* Add a transparency effect for thumnbail images */
 .demo {
@@ -237,52 +259,72 @@ CARD SECTION
 .fourth,
 .fifth {
   padding: 35px;
+  display: -webkit-box;
   display: flex;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   flex-wrap: wrap;
   font-size: 85%;
 }
 .card {
   width: 40%;
+  display: -webkit-box;
   display: flex;
   height: 200px;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
-  align-items: stretch;
+  -webkit-box-align: stretch;
+          align-items: stretch;
   margin-right: 5%;
   margin-top: 30px;
 }
 .card__hero {
-  flex: 0 0 45%;
+  -webkit-box-flex: 0;
+          flex: 0 0 45%;
 }
 .card__image {
   width: 100%;
   display: block;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card__content {
   background: #fff;
-  flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
   padding: 25px 20px;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 .card__price {
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--green-color)), to(#43581F));
   background: linear-gradient(to bottom, var(--green-color), #43581F);
-  flex: 0 0 5%;
-  writing-mode: vertical-rl;
+  -webkit-box-flex: 0;
+          flex: 0 0 5%;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   color: #fff;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 .card__title {
+    display: -webkit-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
 }
 .card__heading {
   margin-right: auto;
@@ -304,8 +346,10 @@ CARD SECTION
   background-color: #4ca2cd;
 }
 .card__details {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   margin-top: auto;
 }
 .card__detail {
@@ -321,6 +365,7 @@ footer {
   background-color: #333;
   padding: 50px;
   font-size: 80%;
+  z-index: 9999;
 }
 .footer-nav {
   list-style: none;
@@ -346,6 +391,7 @@ footer {
   text-decoration: none;
   border: 0;
   color: #888;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
   text-transform: uppercase;
 }
@@ -361,6 +407,7 @@ footer {
 .twitter,
 .googleplus,
 .instagram {
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 .facebook:hover{
